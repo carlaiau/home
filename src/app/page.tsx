@@ -274,10 +274,10 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Software engineer, now working agentically.
+            Experienced software engineer, now working agentically. <strong className='text-blue-500 dark:text-blue-400 font-bold'>Judgement</strong> still matters.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            For over ten years, I wrote code from scratch. Now I work agentically, using AI as leverage to build faster without treating production like a playground. This site took 45 minutes, which is kind of the point. What an exciting time to be building software. Bad news for moats.
+            For fourteen years, I've built software the usual way. Now I work agentically, using AI as leverage, building faster, and knowing what to trust, what to throw away, and what not to let anywhere near production. This site took 45 minutes, which is kind of the point. 
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink href="https://github.com/carlaiau" icon={GitHubIcon}>
