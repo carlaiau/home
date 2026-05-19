@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       'Carl Aiau - Software engineer, and navigator of complexity',
   },
   description:
-    'I’m Carl, a software engineer and entrepreneur based in Dunedin, New Zealand. I’m the founder and CEO of Pale Blue Dawn, where we develop technologies that empower regular people to explore space on their own terms.',
+    "Carl is a software engineer and founder working agentically, building workflow platforms, integrations, and AI-assisted systems while prioritising production safety."
   
 }
 
