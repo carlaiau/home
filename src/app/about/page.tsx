@@ -39,7 +39,7 @@ export default function About() {
 
             <p>In 2020, I joined Sunobi as the first engineer and later became VP of Development. I worked across frontend, backend, DevOps, technical strategy and delivery management, while helping grow the engineering team to 14. During that time, the platform supported more than 200MW of solar system sales.</p>
 
-            <p>These days I am focused on agentic engineering, but with a strong bias toward production safety. I'm interested in using AI to generate, inspect and repair software workflows, without giving agents uncontrolled access to production systems.</p>
+            <p>These days I am focused on agentic engineering, but with a strong bias toward production safety. I&apos;m interested in using AI to generate, inspect and repair software workflows, without giving agents uncontrolled access to production systems.</p>
 
             <p>  At Pale Blue Dawn, we are building a verifiable, agentically driven integrations platform. Agents can explore and refine integration logic through isolated feedback loops, automated testing and CI/CD Actions, while production secrets and sensitive customer environments stay safely out of reach.</p>
 
