@@ -25,6 +25,13 @@ import image2 from '@/images/photos/image-2.jpg'
 import image5 from '@/images/photos/image-5.jpg'
 import image6 from '@/images/photos/image-6.jpg'
 
+const photoImages = [image1, image6, image5, image2]
+const photoRotations = ['-2deg', '0deg', '0deg', '2deg', '-2deg', '-2deg']
+const photoAnimationTimings = photoImages.map((_, imageIndex) => ({
+  animationDelay: `-${(imageIndex * 1.6 + Math.random() * 1.4).toFixed(2)}s`,
+  animationDuration: `${(10 + Math.random() * 4).toFixed(2)}s`,
+}))
+
 function BriefcaseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg
@@ -145,7 +152,7 @@ function Resume({ education }: { education?: boolean }) {
       logo: logoFem,
       start: '2024',
       end: 'Present',
-      description: "Advanced Agentic Systems and AI-assisted engineering."
+      description: "Advanced software engineering, AI-assisted development and agentic workflows."
     },
     {
       company: 'University of Otago',
@@ -153,7 +160,7 @@ function Resume({ education }: { education?: boolean }) {
       logo: logoOtago,
       start: '2018',
       end: '2019',
-      description: "Artificial Intelligence and Information Retrieval. Distinction."
+      description: "Specialised in Artificial Intelligence and Information Retrieval. Graduated with distinction."
     },
     {
       company: 'University of Otago',
@@ -161,7 +168,7 @@ function Resume({ education }: { education?: boolean }) {
       logo: logoOtago,
       start: '2017',
       end: '2018',
-      description: "Compressed Computer Science Undergrad"
+      description: "Intensive computer science conversion programme covering core undergraduate papers."
     },
     {
       company: 'University of Otago',
@@ -169,13 +176,13 @@ function Resume({ education }: { education?: boolean }) {
       logo: logoOtago,
       start: '2010',
       end: '2013',
-      description: "Commerce, finance, and business fundamentals."
+      description: "Commerce degree with a focus on finance, markets and commercial decision-making"
     }
   ]:
   [
     {
       company: 'Pale Blue Dawn',
-      title: 'Co-Founder / Engineer',
+      title: 'Co-Founder & Engineer',
       link: { href: 'https://www.palebluedawn.com/' },
       logo: logoPbd,
       start: '2024',
@@ -189,16 +196,16 @@ function Resume({ education }: { education?: boolean }) {
         logo: logoGoneGood,
         start: '2025',
         end: 'Present',
-        description: "Led architecture and app development for a food-waste reduction marketplace."
+        description: "Led architecture and app development for a food-waste reduction service."
       },
     {
       company: 'Sunobi',
-      title: 'VP of Engineering',
+      title: 'VP of Development',
       link: { href: 'https://www.sunobi.com/' },
       logo: logoSunobi,
       start: '2020',
       end: '2024',
-      description: "First Technical Employee. Helped scale a solar sales engagement platform used across 300MW+ of systems."
+      description: "First technical hire. Helped scale the product and engineering team behind 200MW+ of solar sales."
     },
     {
       company: 'Digital Mates',
@@ -207,14 +214,15 @@ function Resume({ education }: { education?: boolean }) {
       logo: logoDigitalMates,
       start: '2020',
       end: '2025',
-      description: "Built performant websites, ecommerce systems, and headless/Jamstack applications"
+      description: "Built fast websites, statically generated and headless applications for growing agencies and businesses."
     },
     {
       company: 'Self Employed',
-      title: 'Various Contractual Projects',
+      title: 'Freelance Software Engineer',
       logo: logoCarl,
       start: '2012',
       end: 'Present',
+      description: "Delivered WordPress builds, JS web apps, and product development across a range of client projects"
     },
   ]
 
@@ -234,20 +242,21 @@ function Resume({ education }: { education?: boolean }) {
 }
 
 function Photos() {
-  let rotations = ['-2deg', '0deg', '0deg', '2deg', '-2deg', '-2deg']
-  let delays = ['0s', '-2.2s', '-4.4s', '-1.1s', '-3.3s', '-5.5s']
-
   return (
     <div className="mt-16 sm:mt-20">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-12">
-        {[ image1, image6, image5, image2].map((image, imageIndex) => (
+        {photoImages.map((image, imageIndex) => (
           <div
             key={image.src}
-            className="animate-photo-tilt relative w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800"
+            className="photo-rotation relative w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800"
             style={
               {
-                '--photo-rotation': rotations[imageIndex % rotations.length],
-                '--photo-animation-delay': delays[imageIndex % delays.length],
+                '--photo-rotation':
+                  photoRotations[imageIndex % photoRotations.length],
+                '--photo-animation-delay':
+                  photoAnimationTimings[imageIndex].animationDelay,
+                '--photo-animation-duration':
+                  photoAnimationTimings[imageIndex].animationDuration,
               } as React.CSSProperties
             }
           >
@@ -273,10 +282,10 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            I build software for teams navigating complexity.
+            Software engineer, now working agentically.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Carl, a software engineer based in Dunedin, New Zealand. I build workflow platforms, integrations and AI-assisted systems that move fast without treating production like a playground.
+            For over ten years, I wrote code from scratch. Now I work agentically, using AI as leverage to build faster without treating production like a playground. This site took 45 minutes, which is kind of the point.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink href="https://github.com/carlaiau" icon={GitHubIcon}>

@@ -50,7 +50,7 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'I’m Spencer Sharp. I live in New York City, where I design the future.',
+    'I’m Carl. I live in Dunedin, New Zealand, where I juggle complex problems.',
 }
 
 export default function About() {
@@ -72,17 +72,19 @@ export default function About() {
             I’m Carl, a software engineer based in Dunedin, New Zealand.
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
-            <p>I’ve been building software since 2012, starting as a self-taught PHP developer before moving into JavaScript/TypeScript, React, Vue, Node, Go and product infrastructure.</p>
-            <p>My work usually sits between product and engineering: turning messy business problems into usable systems, and keeping those systems flexible enough to survive real customers, unreliable APIs and changing commercial requirements.</p>
-            <p>In 2020, I joined Sunobi as the first employed engineer and later became VP of Development. Sunobi was a sales engagement platform for the US residential solar market. I worked across frontend, backend, DevOps, technical strategy and delivery management while helping grow the engineering team to 14. During that time, the platform supported more than 300MW of solar system sales.</p>
-            <p>I’m especially interested in agentic engineering: using AI systems to generate, inspect, repair and orchestrate software workflows. But I’m more interested in the safety layer than the novelty. Agents are useful when they operate inside clear boundaries, leave an audit trail, expose their reasoning through inspectable artefacts, and fail in ways humans can understand and recover from.</p>
-<p>
-              At Pale Blue Dawn, this shows up in how we design workflow execution. AI can help generate logic and guide users through complex integration decisions, but production runs remain traceable, replayable and retryable. The goal is not to hide complexity behind magic. It is to make complex systems easier to reason about without giving up control.</p>
-            <p>The system is designed around the reality that external platforms fail. Executions can be visually inspected, replayed and retried, giving teams traceability when APIs return bad data, CRM states drift or automations break in production.</p>
-            <p>I also work as tech lead for Gone Good, a New Zealand food-waste reduction platform. I owned the architecture across the customer app, vendor portal and internal admin interface, and led development through launch and iteration.</p>
+            <p>I have been building software since 2012. I started as a self-taught PHP developer, and later moved into JavaScript, across React, Vue and Node, along with Go and product infrastructure.</p>
+
+            <p>Most of my work sits somewhere between product and engineering: taking messy business problems, turning them into usable software, and making sure the system can survive real customers and changing commercial requirements.</p>
+
+            <p>In 2020, I joined Sunobi as the first engineer and later became VP of Development. I worked across frontend, backend, DevOps, technical strategy and delivery management, while helping grow the engineering team to 14. During that time, the platform supported more than 200MW of solar system sales.</p>
+
+            <p>These days I&apos;m focused on agentic engineering, but with a strong bias toward production safety. I&apos;m interested in using AI to generate, inspect, repair and explain software workflows, without giving agents uncontrolled access to production systems.</p>
+
+            <p>At Pale Blue Dawn, I build AI-assisted workflow and integration tools. I also work as tech lead for Gone Good, a New Zealand food-waste reduction platform, where I owned the architecture across the customer app, vendor portal and internal admin interface.</p>
+
             <p>I studied Computer Science at the University of Otago, completing a DipGrad and PGDipSci with distinction, specialising in Artificial Intelligence and Information Retrieval. I also studied Finance, which helps me think about software as a commercial system, not just a technical one.</p>
-            <p>I work best in small teams where ideas move quickly, feedback is honest, and outcomes matter more than ownership.</p>
-            
+
+            <p>I work best in small teams where ideas move quickly, feedback is honest, and the work matters more than who owns the idea.</p>
           </div>
         </div>
         <div className="lg:pl-20">
