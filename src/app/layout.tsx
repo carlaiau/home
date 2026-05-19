@@ -1,9 +1,12 @@
 import { type Metadata } from 'next'
+import Script from 'next/script'
 
 import { Providers } from '@/app/providers'
 import { Layout } from '@/components/Layout'
 
 import '@/styles/tailwind.css'
+
+const googleTagId = 'G-JP4VK9FMHD'
 
 export const metadata: Metadata = {
   title: {
@@ -24,6 +27,18 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full antialiased" suppressHydrationWarning>
       <body className="flex h-full bg-zinc-50 dark:bg-black">
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${googleTagId}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-tag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${googleTagId}');
+          `}
+        </Script>
         <Providers>
           <div className="flex w-full">
             <Layout>{children}</Layout>
