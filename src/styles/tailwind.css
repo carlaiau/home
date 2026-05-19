@@ -34,3 +34,49 @@
   --text-9xl: 8rem;
   --text-9xl--line-height: 1;
 }
+
+@layer utilities {
+  .animate-photo-tilt {
+    transform: rotate(var(--photo-rotation, 0deg));
+    transform-origin: 50% 55%;
+    animation: photo-tilt var(--photo-animation-duration, 9s) ease-in-out infinite;
+    animation-delay: var(--photo-animation-delay, 0s);
+    will-change: transform;
+  }
+
+  .animate-photo-ken-burns {
+    transform-origin: 50% 50%;
+    animation: photo-ken-burns var(--photo-animation-duration, 9s) ease-in-out infinite;
+    animation-delay: var(--photo-animation-delay, 0s);
+    will-change: transform;
+  }
+}
+
+@keyframes photo-tilt {
+  0%,
+  100% {
+    transform: rotate(calc(var(--photo-rotation, 0deg) - 0.8deg));
+  }
+
+  50% {
+    transform: rotate(calc(var(--photo-rotation, 0deg) + 0.8deg));
+  }
+}
+
+@keyframes photo-ken-burns {
+  0%,
+  100% {
+    transform: scale(1.015) translate3d(-0.3%, -0.2%, 0);
+  }
+
+  50% {
+    transform: scale(1.055) translate3d(0.3%, 0.2%, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-photo-ken-burns,
+  .animate-photo-tilt {
+    animation: none;
+  }
+}

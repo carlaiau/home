@@ -1,6 +1,5 @@
 import Image, { type ImageProps } from 'next/image'
 import Link from 'next/link'
-import clsx from 'clsx'
 
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
@@ -74,6 +73,9 @@ function SocialLink({
 interface Role {
   company: string
   title: string
+  link?: {
+    href: string
+  }
   logo: ImageProps['src']
   start: string | { label: string; dateTime: string }
   end: string | { label: string; dateTime: string }
@@ -97,7 +99,20 @@ function Role({ role }: { role: Role }) {
       <dl className="flex flex-auto flex-wrap gap-x-2">
         <dt className="sr-only">Company</dt>
         <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
-          {role.company}
+          {role.link ? (
+            <Link
+              href={role.link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={`Open ${role.company} in a new tab`}
+              aria-label={`${role.company} (opens in a new tab)`}
+              className="transition hover:text-teal-500 hover:underline hover:decoration-teal-500 hover:underline-offset-2 dark:hover:text-teal-400"
+            >
+              {role.company}
+            </Link>
+          ) : (
+            role.company
+          )}
         </dd>
         <dt className="sr-only">Role</dt>
         <dd className="text-xs text-zinc-700 dark:text-zinc-400">
@@ -161,6 +176,7 @@ function Resume({ education }: { education?: boolean }) {
     {
       company: 'Pale Blue Dawn',
       title: 'Co-Founder / Engineer',
+      link: { href: 'https://www.palebluedawn.com/' },
       logo: logoPbd,
       start: '2024',
       end:'Present',
@@ -169,6 +185,7 @@ function Resume({ education }: { education?: boolean }) {
       {
         company: 'GoneGood',
         title: 'Tech Lead',
+        link: { href: 'https://www.gonegood.co.nz/' },
         logo: logoGoneGood,
         start: '2025',
         end: 'Present',
@@ -177,6 +194,7 @@ function Resume({ education }: { education?: boolean }) {
     {
       company: 'Sunobi',
       title: 'VP of Engineering',
+      link: { href: 'https://www.sunobi.com/' },
       logo: logoSunobi,
       start: '2020',
       end: '2024',
@@ -185,6 +203,7 @@ function Resume({ education }: { education?: boolean }) {
     {
       company: 'Digital Mates',
       title: 'Technical Co-Founder',
+      link: { href: 'https://www.digitalmates.co.nz/' },
       logo: logoDigitalMates,
       start: '2020',
       end: '2025',
@@ -192,7 +211,7 @@ function Resume({ education }: { education?: boolean }) {
     },
     {
       company: 'Self Employed',
-      title: 'Various Contractual Builds',
+      title: 'Various Contractual Projects',
       logo: logoCarl,
       start: '2012',
       end: 'Present',
@@ -215,7 +234,8 @@ function Resume({ education }: { education?: boolean }) {
 }
 
 function Photos() {
-  let rotations = ['-rotate-2', '', '', 'rotate-2', '-rotate-2', '-rotate-2']
+  let rotations = ['-2deg', '0deg', '0deg', '2deg', '-2deg', '-2deg']
+  let delays = ['0s', '-2.2s', '-4.4s', '-1.1s', '-3.3s', '-5.5s']
 
   return (
     <div className="mt-16 sm:mt-20">
@@ -223,17 +243,20 @@ function Photos() {
         {[ image1, image6, image5, image2].map((image, imageIndex) => (
           <div
             key={image.src}
-            className={clsx(
-              'relative w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800',
-              rotations[imageIndex % rotations.length],
-            )}
+            className="animate-photo-tilt relative w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800"
+            style={
+              {
+                '--photo-rotation': rotations[imageIndex % rotations.length],
+                '--photo-animation-delay': delays[imageIndex % delays.length],
+              } as React.CSSProperties
+            }
           >
             <div className="aspect-9/10">
               <Image
                 src={image}
                 alt=""
                 sizes="(min-width: 640px) 18rem, 11rem"
-                className="absolute inset-0 h-full w-full object-cover"
+                className="animate-photo-ken-burns absolute inset-0 h-full w-full object-cover"
               />
             </div>
           </div>
