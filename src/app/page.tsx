@@ -1,15 +1,7 @@
 import Image, { type ImageProps } from 'next/image'
 import Link from 'next/link'
-
-import { Button } from '@/components/Button'
-import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
-import {
-  GitHubIcon,
-  InstagramIcon,
-  LinkedInIcon,
-  XIcon,
-} from '@/components/SocialIcons'
+import { GitHubIcon, LinkedInIcon} from '@/components/SocialIcons'
 
 import logoSunobi from '@/images/logos/sunobi-logo.jpeg'
 import logoPbd from "@/images/logos/pbd-icon.png"
@@ -282,10 +274,10 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Software engineer, now working agentically.
+            Software engineer, now mostly working agentically.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            For over ten years, I wrote code from scratch. Now I work agentically, using AI as leverage to build faster without treating production like a playground. This site took 45 minutes, which is kind of the point.
+            For over ten years, I wrote code from scratch. Now I work agentically, using AI as leverage to build faster without treating production like a playground. This site took 45 minutes, which is kind of the point. What an abundant time to be building software. Bad news for moats.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink href="https://github.com/carlaiau" icon={GitHubIcon}>
