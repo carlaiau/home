@@ -41,7 +41,7 @@ export default function About() {
 
             <p>These days I am focused on agentic engineering, but with a strong bias toward production safety. I&apos;m interested in using AI to generate, inspect and repair software workflows, without giving agents uncontrolled access to production systems.</p>
 
-            <p>  At Pale Blue Dawn, we are building a verifiable, agentically driven integrations platform. Agents can explore and refine integration logic through isolated feedback loops, automated testing and CI/CD Actions, while production secrets and sensitive customer environments stay safely out of reach.</p>
+            <p>At <a href="https://palebluedawn.com" className="transition hover:text-teal-500 hover:underline hover:decoration-teal-500 hover:underline-offset-2 dark:hover:text-teal-400">Pale Blue Dawn</a>, we are building a verifiable, agentically driven integrations platform. Agents can explore and refine integration logic through isolated feedback loops, automated testing and CI/CD Actions, while production secrets and sensitive customer environments stay safely out of reach.</p>
 
             <p>I studied Computer Science at the University of Otago, completing a DipGrad and PGDipSci with distinction, specialising in Artificial Intelligence and Information Retrieval. I also studied Finance, which helps me think about software as a commercial system, not just a technical one.</p>
 
