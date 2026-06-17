@@ -139,7 +139,7 @@ function Role({ role }: { role: Role }) {
 function Resume({ education }: { education?: boolean }) {
   let resume: Array<Role> = education ? [
     {
-      company: 'FrontendMasters',
+      company: 'Master.dev',
       title: 'Continuing Education',
       logo: logoFem,
       start: '2024',
