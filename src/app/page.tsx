@@ -277,7 +277,7 @@ export default async function Home() {
             Experienced software engineer, now working agentically. <strong className='text-blue-500 dark:text-blue-400 font-bold'>Judgement</strong> still matters.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            For fourteen years, I've built software the usual way. Now I work agentically, using AI as leverage, building faster, and knowing what to trust, what to throw away, and what not to let anywhere near production. This site took 45 minutes, which is kind of the point. 
+            For fourteen years, I&apos;ve built software the usual way. Now I work agentically, using AI as leverage, building faster, and knowing what to trust, what to throw away, and what not to let anywhere near production. This site took 45 minutes, which is kind of the point. 
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink href="https://github.com/carlaiau" icon={GitHubIcon}>

@@ -9,7 +9,7 @@ import portraitImage from '@/images/photos/image-3.jpg'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'I\'m Carl. I live in Dunedin, New Zealand, where I juggle complex problems.',
+    'I\'m Carl, a Dunedin-based software engineer and co-founder of Pale Blue Dawn.',
 }
 
 export default function About() {
@@ -37,11 +37,11 @@ export default function About() {
 
             <p>Most of my work sits somewhere between product and engineering: taking messy business problems, turning them into usable software, and making sure the system can survive real customers and changing commercial requirements.</p>
 
-            <p>In 2020, I joined Sunobi as the first engineer and later became VP of Development. I worked across frontend, backend, DevOps, technical strategy and delivery management, while helping grow the engineering team to 14. During that time, the platform supported more than 200MW of solar system sales.</p>
-
             <p>These days I am focused on agentic engineering, but with a strong bias toward production safety. I&apos;m interested in using AI to generate, inspect and repair software workflows, without giving agents uncontrolled access to production systems.</p>
 
-            <p>At <a href="https://palebluedawn.com" className="transition hover:text-teal-500 hover:underline hover:decoration-teal-500 hover:underline-offset-2 dark:hover:text-teal-400">Pale Blue Dawn</a>, we are building a verifiable, agentically driven integrations platform. Agents can explore and refine integration logic through isolated feedback loops, automated testing and CI/CD Actions, while production secrets and sensitive customer environments stay safely out of reach.</p>
+            <p>I&apos;m a co-founder of <a href="https://palebluedawn.com" className="transition hover:text-teal-500 hover:underline hover:decoration-teal-500 hover:underline-offset-2 dark:hover:text-teal-400">Pale Blue Dawn</a>, or PBD, where we are building a verifiable, agentically driven workflow and integrations platform for the solar industry and beyond. Agents can explore and refine integration logic through isolated feedback loops, automated testing and CI/CD Actions, while production secrets and sensitive customer environments stay safely out of reach.</p>
+
+            <p>Before PBD, I joined Sunobi as the first engineer and later became VP of Development. I worked across frontend, backend, DevOps, technical strategy and delivery management, while helping grow the engineering team to 14. During that time, the platform supported more than 200MW of solar system sales.</p>
 
             <p>I studied Computer Science at the University of Otago, completing a DipGrad and PGDipSci with distinction, specialising in Artificial Intelligence and Information Retrieval. I also studied Finance, which helps me think about software as a commercial system, not just a technical one.</p>
 
