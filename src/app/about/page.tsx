@@ -35,7 +35,9 @@ export default function About() {
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>I have been building software since 2012. I started as a self-taught PHP developer, and later moved into JavaScript, across React, Vue and Node, along with Go and product infrastructure.</p>
 
-            <p>Most of my work sits somewhere between product and engineering: taking messy business problems, turning them into usable software, and making sure the system can survive real customers and changing commercial requirements.</p>
+            <p>Most of my work sits somewhere between product and engineering: finding the real-world inefficiencies inside a business, turning messy operational problems into usable software, and making sure the result can survive real customers and changing commercial requirements.</p>
+
+            <p>I use automation and AI-driven systems to remove redundant, repeatable human processes from operations. The technology is a means to an end: achieving a clear business objective through lower costs, faster turnaround, fewer errors, or giving people more time for work that actually needs their judgement.</p>
 
             <p>These days I am focused on agentic engineering, but with a strong bias toward production safety. I&apos;m interested in using AI to generate, inspect and repair software workflows, without giving agents uncontrolled access to production systems.</p>
 

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       'Carl Aiau - Software engineer, and navigator of complexity',
   },
   description:
-    "Carl is a software engineer and founder working agentically, building workflow platforms, integrations, and AI-assisted systems while prioritising production safety."
+    "Carl is a software engineer and founder who solves operational inefficiencies with practical automation, integrations, and production-safe AI systems."
   
 }
 

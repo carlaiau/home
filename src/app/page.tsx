@@ -290,6 +290,49 @@ export default async function Home() {
         </div>
       </Container>
       <Photos />
+      <Container className="mt-24 sm:mt-32">
+        <div className="max-w-2xl">
+          <h2 className="text-3xl font-bold tracking-tight text-zinc-800 sm:text-4xl dark:text-zinc-100">
+            I turn operational friction into working systems.
+          </h2>
+          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+            I find the real-world inefficiencies that slow a business down, then
+            design practical software, automations, and AI-driven solutions to
+            remove them. The objective is not AI for its own sake. It is fewer
+            hand-offs, less repetitive human work, and operations that are
+            faster, more reliable, and easier to scale.
+          </p>
+        </div>
+        <div className="mt-12 grid max-w-5xl grid-cols-1 gap-8 sm:grid-cols-3">
+          <div className="sm:border-l sm:border-zinc-200 sm:pl-6 sm:dark:border-zinc-700">
+            <h3 className="font-semibold text-zinc-800 dark:text-zinc-100">
+              Find the friction
+            </h3>
+            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+              Map the workflows, bottlenecks, and repeated decisions that cost
+              teams time and create avoidable errors.
+            </p>
+          </div>
+          <div className="sm:border-l sm:border-zinc-200 sm:pl-6 sm:dark:border-zinc-700">
+            <h3 className="font-semibold text-zinc-800 dark:text-zinc-100">
+              Automate the right work
+            </h3>
+            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+              Connect systems and apply conventional automation or AI where it
+              can safely replace redundant, repeatable processes.
+            </p>
+          </div>
+          <div className="sm:border-l sm:border-zinc-200 sm:pl-6 sm:dark:border-zinc-700">
+            <h3 className="font-semibold text-zinc-800 dark:text-zinc-100">
+              Deliver the outcome
+            </h3>
+            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+              Measure success against the business objective: lower operating
+              cost, shorter turnaround times, fewer errors, or more capacity.
+            </p>
+          </div>
+        </div>
+      </Container>
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-12 lg:max-w-none lg:grid-cols-2">
           
