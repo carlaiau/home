@@ -2,77 +2,9 @@
 
 import { useRouter } from 'next/navigation'
 import { type FormEvent, useState } from 'react'
-import clsx from 'clsx'
 
 import { Button } from '@/components/Button'
-
-function TextField({
-  label,
-  name,
-  type = 'text',
-  autoComplete,
-  required = false,
-  className,
-}: {
-  label: string
-  name: string
-  type?: string
-  autoComplete?: string
-  required?: boolean
-  className?: string
-}) {
-  return (
-    <label className={clsx('block', className)}>
-      <span className="text-sm font-medium text-zinc-800 dark:text-zinc-100">
-        {label}
-      </span>
-      <input
-        type={type}
-        name={name}
-        autoComplete={autoComplete}
-        required={required}
-        className="mt-2 block w-full rounded-md border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 shadow-xs outline-hidden transition placeholder:text-zinc-400 focus:border-teal-500 focus:ring-3 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
-      />
-    </label>
-  )
-}
-
-function SelectField({
-  label,
-  name,
-  required = false,
-  className,
-  options,
-}: {
-  label: string
-  name: string
-  required?: boolean
-  className?: string
-  options: Array<{ label: string; value: string }>
-}) {
-  return (
-    <label className={clsx('block', className)}>
-      <span className="text-sm font-medium text-zinc-800 dark:text-zinc-100">
-        {label}
-      </span>
-      <select
-        name={name}
-        required={required}
-        defaultValue=""
-        className="mt-2 block w-full rounded-md border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 shadow-xs outline-hidden transition focus:border-teal-500 focus:ring-3 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
-      >
-        <option value="" disabled>
-          Select a range
-        </option>
-        {options.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
-          </option>
-        ))}
-      </select>
-    </label>
-  )
-}
+import { SelectField, TextareaField, TextField } from '@/components/FormFields'
 
 export function ContactForm() {
   let router = useRouter()
@@ -144,17 +76,13 @@ export function ContactForm() {
         ]}
       />
 
-      <label className="block sm:col-span-2">
-        <span className="text-sm font-medium text-zinc-800 dark:text-zinc-100">
-          Message
-        </span>
-        <textarea
-          name="message"
-          rows={6}
-          required
-          className="mt-2 block w-full rounded-md border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 shadow-xs outline-hidden transition placeholder:text-zinc-400 focus:border-teal-500 focus:ring-3 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
-        />
-      </label>
+      <TextareaField
+        label="Message"
+        name="message"
+        rows={6}
+        required
+        className="sm:col-span-2"
+      />
 
       <div className="sm:col-span-2">
         <Button type="submit" disabled={status === 'submitting'}>
