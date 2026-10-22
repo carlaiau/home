@@ -5,16 +5,28 @@ import { PhpSupportForm } from '@/app/php2shell/PhpSupportForm'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 
+const previewImage = {
+  url: 'https://carlaiau.com/images/carl-aiau.jpg',
+  width: 800,
+  height: 800,
+  alt: 'Carl Aiau, New Zealand software engineer',
+}
+
 export const metadata: Metadata = {
   title: 'PHP2Shell help & urgent site upgrades in New Zealand',
   description:
-    'Urgent PHP2Shell patch and compatibility help for NZ small and medium businesses running WordPress, Laravel or other PHP sites without developer support. Four-hour minimum, NZ$1,000 total.',
+    'Urgent PHP2Shell patch and compatibility help for NZ small and medium businesses running WordPress, Laravel or other PHP sites without developer support',
   openGraph: {
     title: 'PHP2Shell: get your site patched with local NZ support',
     description:
-      'Carl Aiau helps businesses without developer support test and upgrade PHP sites. Local environment replication, agentic tooling and a planned rollout. Four-hour minimum, NZ$1,000 total.',
+      'Carl Aiau helps businesses without developer support test and upgrade PHP sites. Local environment replication, agentic tooling and a planned rollout.',
     type: 'website',
     locale: 'en_NZ',
+    images: [previewImage],
+  },
+  twitter: {
+    card: 'summary',
+    images: [previewImage],
   },
 }
 
