@@ -1,7 +1,7 @@
 import { type Metadata } from 'next'
 import Link from 'next/link'
 
-import { PhpSupportForm } from '@/app/php2shell/PhpSupportForm'
+import { PhpSupportForm } from '@/app/php2shell-updating/PhpSupportForm'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 
@@ -13,10 +13,14 @@ const previewImage = {
 }
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://carlaiau.com/php2shell-updating',
+  },
   title: 'PHP2Shell help & urgent site upgrades in New Zealand',
   description:
     'Urgent PHP2Shell patch and compatibility help for NZ small and medium businesses running WordPress, Laravel or other PHP sites without developer support',
   openGraph: {
+    url: 'https://carlaiau.com/php2shell-updating',
     title: 'PHP2Shell: get your site patched with local NZ support',
     description:
       'Carl Aiau helps businesses without developer support test and upgrade PHP sites. Local environment replication, agentic tooling and a planned rollout.',

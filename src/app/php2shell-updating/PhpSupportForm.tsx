@@ -33,7 +33,7 @@ export function PhpSupportForm() {
         body: body.toString(),
       })
       if (!response.ok) throw new Error('Form submission failed')
-      router.push('/php2shell/thanks')
+      router.push('/php2shell-updating/thanks')
     } catch {
       setStatus('error')
       requestAnimationFrame(() => errorRef.current?.focus())
