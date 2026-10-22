@@ -84,11 +84,11 @@ export function PhpSupportForm() {
           maxLength={254}
         />
         <TextField
-          label="Website URL"
+          label="Website"
           name="website"
-          type="url"
+          type="text"
           autoComplete="url"
-          placeholder="https://yourbusiness.co.nz"
+          placeholder="yourbusiness.co.nz"
           required
           maxLength={2048}
           className="sm:col-span-2"
