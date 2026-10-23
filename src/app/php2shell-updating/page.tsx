@@ -99,6 +99,24 @@ export default function Php2Shell() {
           </p>
         </section>
 
+        <section aria-labelledby="static-alternative-heading" className="mt-16 max-w-2xl">
+          <h2 id="static-alternative-heading" className="text-2xl font-bold tracking-tight">
+            Rarely change your site? Consider a static conversion.
+          </h2>
+          <p className="mt-4 text-base text-zinc-600 dark:text-zinc-400">
+            For a brochure or informational site, I can replicate your existing
+            design and content as a static website, removing the live PHP and
+            WordPress stack. Compatible booking embeds can stay. I’ll check
+            whether conversion is a better long-term fit for your site.
+          </p>
+          <Link
+            href="/static-site-conversion"
+            className="mt-4 inline-flex min-h-11 items-center text-sm font-semibold underline underline-offset-4"
+          >
+            Explore static site conversion
+          </Link>
+        </section>
+
         <section
           aria-labelledby="approach-heading"
           className="mt-20 grid items-start gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16"
