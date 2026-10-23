@@ -39,7 +39,8 @@ export default function Php2Shell() {
             className="max-w-2xl text-4xl font-bold tracking-tight text-balance sm:text-5xl"
           >
             <span className="text-red-600 dark:text-red-400">PHP2Shell.</span>{' '}
-            Fix your site for less than a rebuild.
+            Protect your site{' '}
+            <span className="text-green-600 dark:text-green-400">ASAP.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-base text-zinc-600 dark:text-zinc-400">
             PHP2Shell news got you sweating? A security scare doesn’t have to
