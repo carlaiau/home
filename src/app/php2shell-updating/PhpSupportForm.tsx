@@ -14,6 +14,7 @@ import {
 export function PhpSupportForm() {
   const router = useRouter()
   const [status, setStatus] = useState<'idle' | 'submitting' | 'error'>('idle')
+  const [service, setService] = useState('not-sure')
   const errorRef = useRef<HTMLParagraphElement>(null)
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -55,7 +56,7 @@ export function PhpSupportForm() {
       <input
         type="hidden"
         name="subject"
-        value="Urgent PHP2Shell upgrade enquiry"
+        value="PHP2Shell help or static conversion enquiry"
       />
       <p hidden>
         <label>
@@ -67,7 +68,19 @@ export function PhpSupportForm() {
         disabled={status === 'submitting'}
         className="grid grid-cols-1 gap-6 sm:grid-cols-2"
       >
-        <legend className="sr-only">Your PHP support enquiry</legend>
+        <legend className="sr-only">Your website support enquiry</legend>
+        <SelectField
+          label="What would you like help with?"
+          name="service"
+          defaultValue="not-sure"
+          onChange={(event) => setService(event.target.value)}
+          className="sm:col-span-2"
+          options={[
+            { label: 'Help me choose the right option', value: 'not-sure' },
+            { label: 'Patch / upgrade PHP', value: 'php-upgrade' },
+            { label: 'Convert my site to static', value: 'static-conversion' },
+          ]}
+        />
         <TextField
           label="Your name"
           name="name"
@@ -103,18 +116,14 @@ export function PhpSupportForm() {
             { label: 'Laravel', value: 'laravel' },
             { label: 'Another PHP application', value: 'other-php' },
             { label: 'Multiple sites / applications', value: 'multiple' },
+            { label: 'Another website builder / CMS', value: 'other-cms' },
           ]}
-        />
-        <TextField
-          label="Hosting provider (optional)"
-          name="hosting"
-          placeholder="It’s okay if you don’t know"
-          maxLength={200}
+          className="sm:col-span-2"
         />
         <TextareaField
           label="What do you need help with?"
           name="message"
-          rows={5}
+          rows={4}
           required
           maxLength={5000}
           aria-describedby="message-help"
@@ -124,27 +133,28 @@ export function PhpSupportForm() {
               id="message-help"
               className="mt-2 block text-sm text-zinc-600 dark:text-zinc-400"
             >
-              Share any hosting alerts, your PHP version if known, and anything
-              that must keep working. Please leave out passwords and access
-              keys.
+              Include any hosting alerts, bookings or forms that must keep
+              working. Please leave out passwords and access keys.
             </span>
           }
         />
-        <CheckboxField
-          name="minimum-engagement"
-          value="Acknowledged: 4-hour minimum, NZD 1000 total"
-          required
-          className="sm:col-span-2"
-          label={
-            <>
-              I understand the minimum engagement is{' '}
-              <strong className="font-semibold text-zinc-800 dark:text-zinc-100">
-                4 hours, NZ$1,000 total
-              </strong>
-              . Any additional work will be agreed with me first.
-            </>
-          }
-        />
+        {service === 'php-upgrade' && (
+          <CheckboxField
+            name="minimum-engagement"
+            value="Acknowledged: 4-hour minimum, NZD 1000 total"
+            required
+            className="sm:col-span-2"
+            label={
+              <>
+                I understand PHP upgrade support has a minimum engagement of{' '}
+                <strong className="font-semibold text-zinc-800 dark:text-zinc-100">
+                  4 hours, NZ$1,000 total
+                </strong>
+                . Any additional work will be agreed with me first.
+              </>
+            }
+          />
+        )}
         <div className="sm:col-span-2">
           <Button
             type="submit"
@@ -153,7 +163,7 @@ export function PhpSupportForm() {
           >
             {status === 'submitting'
               ? 'Sending your enquiry…'
-              : 'Request urgent PHP support'}
+              : 'Get a quote for my site'}
           </Button>
           <p aria-live="polite" className="sr-only">
             {status === 'submitting' ? 'Sending your enquiry.' : ''}
