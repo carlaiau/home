@@ -135,9 +135,9 @@ export default function Php2Shell() {
               Let’s look at your site.
             </h2>
             <p className="mt-3 mb-7 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
-              Send the address and I’ll help you choose the sensible option. PHP
-              upgrade support has a four-hour minimum of NZ$1,000 total. Static
-              conversions are quoted per site.
+              Send the address and I’ll help you choose the sensible option.
+              Both PHP upgrades and static conversions have a minimum cost of
+              NZ$1,000.
             </p>
             <PhpSupportForm />
           </div>

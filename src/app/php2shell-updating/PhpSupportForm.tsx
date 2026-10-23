@@ -14,7 +14,6 @@ import {
 export function PhpSupportForm() {
   const router = useRouter()
   const [status, setStatus] = useState<'idle' | 'submitting' | 'error'>('idle')
-  const [service, setService] = useState('not-sure')
   const errorRef = useRef<HTMLParagraphElement>(null)
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -73,7 +72,6 @@ export function PhpSupportForm() {
           label="What would you like help with?"
           name="service"
           defaultValue="not-sure"
-          onChange={(event) => setService(event.target.value)}
           className="sm:col-span-2"
           options={[
             { label: 'Help me choose the right option', value: 'not-sure' },
@@ -138,23 +136,21 @@ export function PhpSupportForm() {
             </span>
           }
         />
-        {service === 'php-upgrade' && (
-          <CheckboxField
-            name="minimum-engagement"
-            value="Acknowledged: 4-hour minimum, NZD 1000 total"
-            required
-            className="sm:col-span-2"
-            label={
-              <>
-                I understand PHP upgrade support has a minimum engagement of{' '}
-                <strong className="font-semibold text-zinc-800 dark:text-zinc-100">
-                  4 hours, NZ$1,000 total
-                </strong>
-                . Any additional work will be agreed with me first.
-              </>
-            }
-          />
-        )}
+        <CheckboxField
+          name="minimum-engagement"
+          value="Acknowledged: minimum cost NZD 1000 for PHP upgrades or static conversions"
+          required
+          className="sm:col-span-2"
+          label={
+            <>
+              I understand both options have a minimum cost of{' '}
+              <strong className="font-semibold text-zinc-800 dark:text-zinc-100">
+                NZ$1,000
+              </strong>
+              . Any additional work will be agreed with me first.
+            </>
+          }
+        />
         <div className="sm:col-span-2">
           <Button
             type="submit"
