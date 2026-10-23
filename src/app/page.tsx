@@ -333,6 +333,26 @@ export default async function Home() {
           </div>
         </div>
       </Container>
+      <Container className="mt-24 sm:mt-32">
+        <div className="max-w-2xl">
+          <h2 className="text-3xl font-bold tracking-tight text-zinc-800 sm:text-4xl dark:text-zinc-100">
+            Keep your website. Simplify what runs it.
+          </h2>
+          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+            If your WordPress site mainly introduces your business and rarely
+            changes, I can replicate its existing design and content as a
+            lightweight static site. Keep the site you like, reduce hosting
+            costs, and remove the WordPress maintenance burden. Compatible
+            booking embeds and other integrations can come with it.
+          </p>
+          <Link
+            href="/static-site-conversion"
+            className="mt-5 inline-flex min-h-11 items-center text-sm font-semibold text-zinc-800 underline underline-offset-4 hover:text-teal-700 dark:text-zinc-100 dark:hover:text-teal-400"
+          >
+            Explore static site conversion
+          </Link>
+        </div>
+      </Container>
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-12 lg:max-w-none lg:grid-cols-2">
           
