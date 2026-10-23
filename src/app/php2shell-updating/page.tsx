@@ -112,14 +112,16 @@ export default function Php2Shell() {
                   booking embeds and other browser-based tools can stay.
                 </p>
                 <p className="mt-3 text-base text-zinc-600 dark:text-zinc-400">
+                  Still need to update content? A semi-static conversion can
+                  pair your site with CloudCannon, Sanity or another headless
+                  CMS. You keep control of your text and images through a
+                  separate editing system, while visitors get static pages
+                  without a public WordPress or PHP backend.
+                </p>
+                <p className="mt-3 text-base text-zinc-600 dark:text-zinc-400">
                   That removes the public WordPress, PHP and database stack,
                   reduces security exposure, and can bring web hosting costs
                   down to zero on a suitable free plan.
-                </p>
-                <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
-                  Domain, email and paid integrations remain separate. I’ll
-                  check forms, bookings and how you need to edit content before
-                  recommending a conversion.
                 </p>
               </div>
             </div>
